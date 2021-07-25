@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="#">
+    <title>Momo P2P</title>
+  </head>
+  <body>
+    <h3>Momo P2P</h3>
+    <div>
+      <select id="codec">
+        <option value="H264">H264</option>
+        <option value="VP8">VP8</option>
+        <option value="VP9">VP9</option>
+      </select>
+      <input type="button" onclick="connect();" value="Connect">
+      <input type="button" onclick="disconnect();" value="Disconnect">
+      <input type="button" onclick="play();" value="Play">
+      <input type="text" id="data_text">
+      <input type="button" onclick="sendDataChannel();" value="Send">
+      <!-- <button onClick="outputVideo2()">output</button> -->
+    </div>
+    <div>
+      <video id="remote_video" autoplay style="border: 3px solid gray;"></video>
+      <canvas id="my-canvas" style="display: none" width="1280px" height="720px"></canvas>
+    </div>
+    <script type='text/javascript' src='./webrtc.js'></script>
+    <script type="text/javascript" src="./canvas.js"></script>
+  </body>
+</html>
